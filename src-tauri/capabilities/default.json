@@ -1,0 +1,31 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "core:webview:allow-set-webview-zoom",
+    "opener:default",
+    "dialog:allow-open",
+    "dialog:allow-ask",
+    "fs:default",
+    "fs:allow-watch",
+    "fs:allow-unwatch",
+    { "identifier": "fs:scope", "allow": [{ "path": "$HOME/**" }, { "path": "/home/**" }] },
+    "fs:scope-home-recursive",
+    "fs:allow-home-read-recursive",
+    "fs:allow-home-write-recursive",
+    "fs:allow-read-text-file",
+    "fs:allow-write-text-file",
+    "fs:allow-write-file",
+    "fs:allow-read-dir",
+    "fs:allow-create",
+    "fs:allow-mkdir",
+    "fs:allow-rename",
+    "fs:allow-remove",
+    "fs:allow-exists"
+  ]
+}

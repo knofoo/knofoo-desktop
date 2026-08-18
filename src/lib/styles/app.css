@@ -1,0 +1,50 @@
+@import './font.css';
+
+:root {
+    --knofoo-bg-primary: #0f0f0f;
+    --knofoo-bg-secondary: #1a1a1a;
+    --knofoo-text-primary: #f5f5f5;
+    --knofoo-text-secondary: #a0a0a0;
+    --knofoo-border: #2a2a2a;
+    --knofoo-accent-primary: rgb(225, 80, 35);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+    background-color: var(--knofoo-bg-primary);
+    color: var(--knofoo-text-primary);
+}
+
+/* Themed select dropdowns — apply to all <select> + <option> globally so the
+   open dropdown menu respects the dark theme instead of the system default. */
+select {
+    background-color: #14141c;
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='rgba(226,232,240,0.5)' d='M0 0l5 6 5-6z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    padding-right: 24px;
+}
+
+select option {
+    background-color: #14141c;
+    color: #e2e8f0;
+}
