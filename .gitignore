@@ -1,3 +1,11 @@
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
 # Logs
 logs/
 *.log
@@ -13,6 +21,10 @@ dist/
 dist-ssr/
 *.local
 
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
 # Tauri / Rust
 src-tauri/target/
 target/
@@ -25,6 +37,8 @@ target/
 src-tauri/gen/android/app/build/
 src-tauri/gen/android/app/.cxx/
 src-tauri/gen/android/app/build-cache/
+src-tauri/gen/android/buildSrc/.kotlin/
+**/.kotlin/
 
 # Android local configuration
 local.properties
@@ -38,6 +52,7 @@ local.properties
 .env
 .env.*
 !.env.example
+!.env.test
 
 # Editor directories and files
 .vscode/*
@@ -57,3 +72,6 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# Trash
+trash/

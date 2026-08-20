@@ -1,11 +1,13 @@
 # Helper Page to Get Started on Android
 
 Install the Arch packages:
+
 ```
 pacman -S jdk21-openjdk android-tools
 ```
 
 Initialized Rust:
+
 ```
 rustup default stable
 ```
@@ -23,6 +25,7 @@ rustup default stable
 ### Android SDK
 
 In Android Studio we configured the SDK location as:
+
 ```
 $HOME/Android/Sdk
 ```
@@ -31,6 +34,7 @@ In:
 Settings → Languages & Frameworks → Android SDK → SDK Tools
 
 We installed:
+
 - Android SDK Command-line Tools
 - Android SDK Platform-Tools
 - Android SDK Build-Tools
@@ -38,20 +42,25 @@ We installed:
 - Android Emulator was also available, although we didn't need it
 
 Initially we were missing the command-line tools and NDK, which caused the first:
+
 ```
 failed to ensure Android environment
 ```
 
 After installing them, we had:
+
 ```
 $HOME/Android/Sdk/cmdline-tools/
 ```
+
 and:
+
 ```
 $HOME/Android/Sdk/ndk/30.0.15729638
 ```
 
 ## Configure Android environment variables
+
 ```
 export ANDROID_HOME="$HOME/Android/Sdk"
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
@@ -83,6 +92,7 @@ adb shell pm list packages | grep -i knofoo
 ## Rust Android targets
 
 We installed the Android Rust targets:
+
 ```
 rustup target add \
   aarch64-linux-android \
@@ -109,6 +119,7 @@ Our package.json originally had:
   "preview": "vite preview"
 }
 ```
+
 but the Tauri Android build needed the tauri npm script.
 
 We added:
