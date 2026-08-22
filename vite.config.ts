@@ -12,7 +12,9 @@ export default defineConfig({
 				experimental: { async: true }
 			},
 			adapter: adapter(),
-			experimental: { remoteFunctions: true }
+			experimental: { 
+				remoteFunctions: true
+			}
 		})
 	],
     server: {
