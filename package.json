@@ -38,6 +38,7 @@
 		"#lib/*": "./src/lib/*"
 	},
 	"dependencies": {
-		"@tauri-apps/plugin-dialog": "^2.7.2"
+		"@tauri-apps/plugin-dialog": "^2.7.2",
+		"@tauri-apps/plugin-fs": "^2.5.1"
 	}
 }
